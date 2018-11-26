@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6624" height="100.0" layoutY="-12.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="1280.0" />
+      <Pane layoutX="862.0" layoutY="647.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField layoutX="405.0" layoutY="25.0" prefHeight="51.0" prefWidth="621.0" promptText="Location" />
+      <Button layoutX="566.0" layoutY="399.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Sign In" />
+      <Button fx:id="back" layoutX="280.0" layoutY="25.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Text fill="#ff6624" layoutX="547.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In">
+         <font>
+            <Font name="Comic Sans MS" size="63.0" />
+         </font>
+      </Text>
+      <TextField layoutX="566.0" layoutY="270.0" promptText="Email" />
+      <PasswordField layoutX="566.0" layoutY="308.0" promptText="Password" />
+      <Button fx:id="logInHome" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#homePage" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
+      <Button layoutX="566.0" layoutY="365.0" mnemonicParsing="false" onAction="#signUp" prefHeight="25.0" prefWidth="149.0" text="Sign Up" />
+      <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="14.0" layoutY="10.0">
+         <image>
+            <Image url="@stomachoverflow.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

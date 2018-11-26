@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Pane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6624" height="100.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="1280.0" />
+            <Button fx:id="back" layoutX="280.0" layoutY="25.0" mnemonicParsing="false" onAction="#back" text="Back" />
+            <TextField layoutX="420.0" layoutY="24.0" prefHeight="51.0" prefWidth="621.0" promptText="Location" />
+            <Text fill="#ff6624" layoutX="31.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="31.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+               <font>
+                  <Font name="Comic Sans MS" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="-4.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Star rating goes here" />
+            <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="231.0" layoutY="282.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="433.0" layoutX="37.0" layoutY="260.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="1201.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="51.0" layoutX="1038.0" layoutY="212.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6726" height="51.0" layoutX="841.0" layoutY="212.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff672600" height="51.0" layoutX="644.0" layoutY="212.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+            <Button fx:id="searchLocation" layoutX="677.0" layoutY="212.0" mnemonicParsing="false" onAction="#search" prefHeight="51.0" prefWidth="134.0" text="Menu" />
+            <Button layoutX="874.0" layoutY="212.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="134.0" text="About" />
+            <Button fx:id="reviews" layoutX="1062.0" layoutY="212.0" mnemonicParsing="false" onAction="#reviews" prefHeight="51.0" prefWidth="153.0" text="Reviews" />
+            <Button fx:id="logInHome" layoutX="30.0" layoutY="13.0" mnemonicParsing="false" onAction="#homePage" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
+            <Button fx:id="homeLogIn" layoutX="1110.0" layoutY="25.0" mnemonicParsing="false" onAction="#logInPage" text="Sign In" />
+            <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="14.0" layoutY="10.0">
+               <image>
+                  <Image url="@stomachoverflow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="405.0" fitWidth="431.0" layoutX="60.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@map.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="520.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hours 12AM - 10PM" wrappingWidth="376.3046875" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
