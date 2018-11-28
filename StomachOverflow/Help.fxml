@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6624" height="100.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="1280.0" />
+      <Pane layoutX="862.0" layoutY="647.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField layoutX="366.0" layoutY="25.0" prefHeight="51.0" prefWidth="621.0" promptText="Location" />
+      <Button layoutX="1026.0" layoutY="40.0" mnemonicParsing="false" text="Sign In" />
+      <Button fx:id="back" layoutX="290.0" layoutY="40.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Text layoutX="435.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How Can We Assist You?">
+         <font>
+            <Font name="Comic Sans MS Bold" size="34.0" />
+         </font>
+      </Text>
+      <ChoiceBox layoutX="565.0" layoutY="209.0" prefWidth="150.0" />
+      <TextArea layoutX="187.0" layoutY="309.0" prefHeight="337.0" prefWidth="879.0" />
+      <Button layoutX="627.0" layoutY="686.0" mnemonicParsing="false" text="Submit" />
+      <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="14.0" layoutY="10.0">
+         <image>
+            <Image url="@stomachoverflow.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
