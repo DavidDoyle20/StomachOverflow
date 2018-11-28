@@ -42,12 +42,6 @@
                   <Image url="@stomachoverflow.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="405.0" fitWidth="431.0" layoutX="60.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@map.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="520.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hours 12AM - 10PM" wrappingWidth="376.3046875" />
          </children>
       </Pane>
    </children>

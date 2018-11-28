@@ -10,6 +10,11 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
+      <ImageView fitHeight="748.0" fitWidth="1280.0" layoutY="100.0">
+         <image>
+            <Image url="@Signup.jpg" />
+         </image>
+      </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6624" height="100.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="1280.0" />
       <Pane layoutX="862.0" layoutY="647.0" prefHeight="200.0" prefWidth="200.0" />
       <TextField layoutX="420.0" layoutY="24.0" prefHeight="51.0" prefWidth="621.0" promptText="Location" />
@@ -20,11 +25,11 @@
             <Font name="Comic Sans MS" size="63.0" />
          </font>
       </Text>
-      <TextField layoutX="567.0" layoutY="266.0" promptText="Email" />
-      <PasswordField layoutX="566.0" layoutY="309.0" promptText="Password" />
-      <PasswordField layoutX="566.0" layoutY="353.0" promptText="Enter Password Again" />
-      <CheckBox layoutX="540.0" layoutY="415.0" mnemonicParsing="false" text="I Agree to the Terms &amp; Conditions" />
-      <Button layoutX="576.0" layoutY="446.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Sign Up" />
+      <TextField fx:id="userNameSignUp" layoutX="567.0" layoutY="266.0" promptText="Email" />
+      <PasswordField fx:id="passwordSignUp" layoutX="566.0" layoutY="309.0" promptText="Password" />
+      <PasswordField fx:id="passwordSignUpConfirm" layoutX="566.0" layoutY="353.0" promptText="Enter Password Again" />
+      <CheckBox layoutX="540.0" layoutY="415.0" mnemonicParsing="false" text="I Agree to the Terms &amp; Conditions" textFill="#ff6624" />
+      <Button layoutX="576.0" layoutY="446.0" mnemonicParsing="false" onAction="#logIn" prefHeight="25.0" prefWidth="128.0" text="Sign Up" />
       <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="14.0" layoutY="10.0">
          <image>
             <Image url="@stomachoverflow.png" />

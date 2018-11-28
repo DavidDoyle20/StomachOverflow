@@ -37,6 +37,24 @@
             <Button fx:id="reviews" layoutX="1062.0" layoutY="212.0" mnemonicParsing="false" onAction="#reviews" prefHeight="51.0" prefWidth="153.0" text="Reviews" />
             <Button fx:id="logInHome" layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#homePage" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
             <Button fx:id="homeLogIn" layoutX="1110.0" layoutY="25.0" mnemonicParsing="false" onAction="#logInPage" text="Sign In" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="125.0" layoutX="52.0" layoutY="277.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="500.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="125.0" layoutX="52.0" layoutY="420.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="500.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="125.0" layoutX="572.0" layoutY="420.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="500.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="125.0" layoutX="572.0" layoutY="277.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="500.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="125.0" layoutX="572.0" layoutY="558.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="500.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="125.0" layoutX="52.0" layoutY="558.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="500.0" />
+            <Text layoutX="74.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="McNuggets" />
+            <Text layoutX="66.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cheeseburger" />
+            <Text layoutX="66.0" layoutY="599.0" strokeType="OUTSIDE" strokeWidth="0.0" text="McChicken" />
+            <Text layoutX="593.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Triple Cheeseburger" />
+            <Text layoutX="593.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bacon McMuffin" />
+            <Text layoutX="593.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sausage Biscuit" />
+            <Text layoutX="209.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$4.49" />
+            <Text layoutX="231.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$1" />
+            <Text layoutX="203.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$1" />
+            <Text layoutX="816.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$3" />
+            <Text layoutX="778.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$1" />
+            <Text layoutX="778.0" layoutY="599.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$1" />
          </children>
       </Pane>
       <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="14.0" layoutY="10.0">

@@ -25,8 +25,8 @@
             <Font name="Comic Sans MS" size="63.0" />
          </font>
       </Text>
-      <TextField layoutX="566.0" layoutY="270.0" promptText="Email" />
-      <PasswordField layoutX="566.0" layoutY="308.0" promptText="Password" />
+      <TextField fx:id = "userNameLogIn" layoutX="566.0" layoutY="270.0" promptText="Email" />
+      <PasswordField fx:id = "passwordLogIn" layoutX="566.0" layoutY="308.0" promptText="Password" />
       <Button fx:id="logInHome" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#homePage" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
       <Button layoutX="566.0" layoutY="365.0" mnemonicParsing="false" onAction="#signUp" prefHeight="25.0" prefWidth="149.0" text="Sign Up" />
       <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="14.0" layoutY="10.0">
