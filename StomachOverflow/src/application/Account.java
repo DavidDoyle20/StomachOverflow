@@ -1,5 +1,6 @@
 package application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 
 public class Account {
 	//INSERT SHIT CODE HERE
@@ -7,6 +8,8 @@ public class Account {
 	private String username;
 	private String password;
 	private String name;
+	private Image userImage;
+	
 	//private Review reviews;
 	private DSLinkedStack<Scene> visitedRestaurants = new DSLinkedStack<Scene>();
 
