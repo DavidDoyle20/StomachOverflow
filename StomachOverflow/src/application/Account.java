@@ -1,17 +1,15 @@
 package application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.util.Stack;
 
 public class Account {
-	//INSERT SHIT CODE HERE
 	
 	private String username;
 	private String password;
-	private String name;
-	private Image userImage;
 	
-	//private Review reviews;
-	private DSLinkedStack<Scene> visitedRestaurants = new DSLinkedStack<Scene>();
 
 	public Account(String username, String password) {
 		this.username = username;
@@ -34,13 +32,7 @@ public class Account {
 		this.password = password;
 	}
 
-	public DSLinkedStack<Scene> getVisitedRestaurants() {
-		return visitedRestaurants;
-	}
 
-	public void setVisitedRestaurants(DSLinkedStack<Scene> visitedRestaurants) {
-		this.visitedRestaurants = visitedRestaurants;
-	}
 	
 	
 	

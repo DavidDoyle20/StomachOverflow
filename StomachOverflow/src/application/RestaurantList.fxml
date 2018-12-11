@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RestListController">
+   <children>
+      <Pane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff6624" height="100.0" stroke="#ff6624" strokeType="INSIDE" strokeWidth="3.0" width="1280.0" />
+            <Button fx:id="back" layoutX="280.0" layoutY="25.0" mnemonicParsing="false" onAction="#back" text="Back" />
+            <TextField layoutX="420.0" layoutY="24.0" prefHeight="51.0" prefWidth="621.0" promptText="Location" />
+            <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="231.0" layoutY="282.0" />
+            <Button fx:id="logInHome" layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#homePage" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
+            <Button fx:id="homeLogIn" layoutX="1110.0" layoutY="25.0" mnemonicParsing="false" onAction="#logInPage" text="Sign In" />
+            <TableView fx:id="RestaurantTable" layoutX="261.0" layoutY="100.0" prefHeight="622.0" prefWidth="1019.0">
+              <columns>
+                  <TableColumn fx:id="RestaurantName" prefWidth="100.0" text="Name" />
+                <TableColumn fx:id="images" prefWidth="150.0" text="Image" />
+                  <TableColumn fx:id="desc" maxWidth="1000.0" prefWidth="193.0" text="Genre" />
+                  <TableColumn fx:id="averagePrice" maxWidth="1000.0" prefWidth="193.0" text="Average Price" />
+                  <TableColumn fx:id="ratingDesc" maxWidth="1000.0" prefWidth="192.0" text="Average Rating" />
+                  <TableColumn fx:id="hours" maxWidth="1000.0" prefWidth="190.0" text="Hours" />
+              </columns>
+            </TableView>
+            <Button layoutX="27.0" layoutY="150.0" mnemonicParsing="false" onAction="#seeRestaurant" prefHeight="16.0" prefWidth="200.0" text="See Selected Restaurant" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="14.0" layoutY="10.0">
+         <image>
+            <Image url="@stomachoverflow.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

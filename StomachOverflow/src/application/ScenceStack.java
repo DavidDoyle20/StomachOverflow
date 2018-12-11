@@ -1,10 +1,10 @@
 package application;
 
 import javafx.scene.Scene;
-
+import java.util.Stack;
 public final class ScenceStack extends Object{
 	
-	private static DSLinkedStack<Scene> sceneStack = new DSLinkedStack<Scene>();
+	private static Stack<Scene> sceneStack = new Stack<Scene>();
 	
 	public ScenceStack() {
 		
@@ -19,7 +19,7 @@ public final class ScenceStack extends Object{
 	}
 	
 	public static Scene top() {
-		return sceneStack.top();
+		return sceneStack.peek();
 	}
 
 }

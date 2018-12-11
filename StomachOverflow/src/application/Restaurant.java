@@ -1,10 +1,11 @@
 package application;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
-import javafx.scene.image.Image;
-import java.util.PriorityQueue;
+import javafx.scene.image.ImageView;
 
 public class Restaurant implements Comparable<Restaurant> {
+    private DecimalFormat f; 
 	private String name;
 	private int id;
 	private String address;
@@ -13,13 +14,16 @@ public class Restaurant implements Comparable<Restaurant> {
 	private String hours;
 	private String genre;
 	private String priceRange;
-	private Image image;
-
-	// private ArrayList<Review> rewiews = new ArrayList<Review>;
+	private double averagePrice = 0;
+	private double averageRating = 0;
+	private ImageView image;
+	private double numericalRating = 0;
+	private ArrayList<Review> review = new ArrayList<Review>();
 	private ArrayList<FoodItem> menuItems = new ArrayList<FoodItem>();
 
-	public Restaurant(String name, String id, String address, String number, String email, String hours, String genre,
-			String priceRange, Image image, ArrayList<FoodItem> menuItems) {
+	public Restaurant(String name, String address, String number, String email, String hours, String genre,
+			String priceRange, ImageView photo, ArrayList<FoodItem> menuItems) {
+		f = new DecimalFormat("##.00");
 		this.name = name;
 		this.id = name.hashCode();
 		this.address = address;
@@ -28,15 +32,70 @@ public class Restaurant implements Comparable<Restaurant> {
 		this.hours = hours;
 		this.genre = genre;
 		this.priceRange = priceRange;
-		this.image = image;
+		this.image = photo;
+		image.setFitWidth(120);
+		image.setPreserveRatio(true);
+		image.setSmooth(true);
+		image.setCache(true);
 		this.menuItems = menuItems;
+		for(FoodItem x: menuItems) {
+			averagePrice += x.getPrice();
+		}
+		averagePrice /= menuItems.size();
+		averagePrice = Double.parseDouble(f.format(averagePrice));
+		
 	}
 
-	/*
-	 * public ArrayList<Review> getReviews() { return reviews; }
-	 * 
-	 * public void setReviews(ArrayList<Review> reviews) { this.reviews = reviews; }
-	 */
+	public double getNumericalRating() {
+		return numericalRating;
+	}
+
+	public void setNumericalRating(double numericalRating) {
+		this.numericalRating = numericalRating;
+	}
+
+	public ArrayList<Review> getReviews() {
+		return review;
+	}
+	public void addReview(Review toAdd) {
+		review.add(toAdd);
+	}
+	public void refreshNumericalRating() {
+		double sum = 0;
+		for(Review x: review) {
+			sum += x.getRating();
+		}
+		numericalRating = (double)Math.round((sum / review.size()) * 100.0) / 100.0;
+		averageRating = Double.parseDouble(f.format(numericalRating / review.size()));
+	}
+	
+	public ArrayList<Review> getReview() {
+		return review;
+	}
+
+	public void setReview(ArrayList<Review> review) {
+		this.review = review;
+	}
+
+	public double getAveragePrice() {
+		return averagePrice;
+	}
+
+	public void setAveragePrice(double averagePrice) {
+		this.averagePrice = averagePrice;
+	}
+
+	public double getAverageRating() {
+		return averageRating;
+	}
+
+	public void setAverageRating(double averageRating) {
+		this.averageRating = averageRating;
+	}
+
+	public void setReviews(ArrayList<Review> reviews) {
+		this.review = reviews;
+	}
 
 	public String getName() {
 		return name;
@@ -102,11 +161,11 @@ public class Restaurant implements Comparable<Restaurant> {
 		this.priceRange = priceRange;
 	}
 
-	public Image getImage() {
+	public ImageView getImage() {
 		return image;
 	}
 
-	public void setImage(Image image) {
+	public void setImage(ImageView image) {
 		this.image = image;
 	}
 
@@ -117,10 +176,11 @@ public class Restaurant implements Comparable<Restaurant> {
 	public void setMenuItems(ArrayList<FoodItem> menuItems) {
 		this.menuItems = menuItems;
 	}
-	
+
 	public void AddMenuItem(FoodItem x) {
 		menuItems.add(x);
 	}
+
 	@Override
 	public int compareTo(Restaurant o) {
 		if (o.getName().compareTo(name) < 0) {

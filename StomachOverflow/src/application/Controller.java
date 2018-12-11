@@ -1,10 +1,13 @@
 package application;
 
 import java.io.IOException;
-
+import java.util.Stack;
 import application.ScenceStack;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -14,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -22,14 +26,10 @@ import java.util.HashMap;
 
 public class Controller implements Initializable {
 	
-	private Account testAccount = new Account("david", "doyle");
-	private String testKey = testAccount.getUsername().hashCode() + "";
 	private Button back;
 	private Button faq;
 	private Button help;
 	private Button searchLocation;
-	private Button about;
-	private Button reviews;
 	private Button logInHome;
 	private Button homeLogIn;
 	@FXML
@@ -42,14 +42,33 @@ public class Controller implements Initializable {
 	private TextField passwordSignUp;
 	@FXML
 	private TextField passwordSignUpConfirm;  
+	@FXML
+	private ChoiceBox<String> restGenre;
+	@FXML
+	private ChoiceBox<Integer> rating;
+	@FXML
+	private ChoiceBox<String> price;
+	@FXML
+	private ChoiceBox<String> HoursOp;
 	
-	protected DSLinkedStack<Scene> sceneStack;
+	protected Stack<Scene> sceneStack;
 
 	public void initialize(URL arg0V, ResourceBundle arg1) {
-		sceneStack = new DSLinkedStack<Scene>();
-		AccountHashMap.put(testKey, testAccount);
+		sceneStack = new Stack<Scene>();
 	}
 
+	public void search(ActionEvent e) {
+		Parent root;
+		try {
+			root = FXMLLoader.load(getClass().getResource("RestaurantList.fxml"));
+			ScenceStack.push(((Node) e.getSource()).getScene());
+			Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+			stage.setScene(new Scene(root, 1280, 720));
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
 	public void logInPage(ActionEvent e) {
 		Parent root;
 		try {
@@ -76,44 +95,10 @@ public class Controller implements Initializable {
 		}
 	}
 
-	public void search(ActionEvent e) {
-		Parent root;
-		try {
-			root = FXMLLoader.load(getClass().getResource("Rest.fxml"));
-			ScenceStack.push(((Node) e.getSource()).getScene());
-			Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-			stage.setScene(new Scene(root, 1280, 720));
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-	}
+	
 
-	public void about(ActionEvent e) {
-		Parent root;
-		try {
-			root = FXMLLoader.load(getClass().getResource("About.fxml"));
-			ScenceStack.push(((Node) e.getSource()).getScene());
-			Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-			stage.setScene(new Scene(root, 1280, 720));
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-	}
 
-	public void reviews(ActionEvent e) {
-		Parent root;
-		try {
-			root = FXMLLoader.load(getClass().getResource("Reviews.fxml"));
-			ScenceStack.push(((Node) e.getSource()).getScene());
-			Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-			stage.setScene(new Scene(root, 1280, 720));
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-	}
+
 
 	public void faq(ActionEvent e) {
 		Parent root;
@@ -185,6 +170,8 @@ public class Controller implements Initializable {
 		else {
 			if(AccountHashMap.get(key).getPassword().equals(passwordLogIn.getText())) {
 				System.out.println("yes");
+				AccountState.setCurrAcc(AccountHashMap.get(key));
+				System.out.println(AccountState.getCurrAcc().getUsername() + " Logged in");
 				Parent root;
 				try {
 					root = FXMLLoader.load(getClass().getResource("Home.fxml"));
